@@ -1,5 +1,5 @@
 <p>
-  <img src="logo.png" width="200px">
+  <img src="logo.png" width="200px" alt="quarkly atomize">
 </p>
 <h1> @quarkly/theme </h1>
 
