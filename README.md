@@ -4,21 +4,19 @@
 <h1> @quarkly/theme </h1>
 
 <br>
-Компонент для создания и использования тем совместно с @quarkly/atomize
-
-Темы в quarkly базируются на css-переменных.
-
-Ключевой особенностью тем в кваркли явлется возможность переиспользования переменных из тем.
-
-Для того, чтобы использовать переменные из темы достаточно описать свойство в теме и обратиться к этому свойству используя префикс "--".
+Component for creating and using themes with @quarkly/atomize
+In Quarkly, themes are based on CSS variables.
+ 
+The key feature of Quarkly themes is that variables from themes can be reused.
+To use variables from a theme, just describe the property in the theme and call this property using the prefix "--".
 
 # Demo
 
 - [Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
 - [Quarkly](https://quarkly.io)
 
-# Installation and Usage
-Темы используются вместе с [atomize](https://github.com/quarkly/atomize).
+# Install and Usage
+Themes are used together with [atomize](https://github.com/quarkly/atomize).
 ```sh
 npm i @quarkly/atomize
 ```
@@ -26,7 +24,7 @@ npm i @quarkly/atomize
 ```sh
 npm i styled-components
 ```
-Переменные можно использовать как в JSX:
+The variables can be used both in JSX:
 
 ```js
 const theme = {
@@ -41,7 +39,7 @@ export const MyComp = () => (
 );
 ```
 
-Так и в самой теме:
+And in the theme:
 
 ```js
 const theme = {
@@ -59,7 +57,7 @@ export const MyComp = () => (
 );
 ```
 
-Для цветов в jsx-разметке предусмотрен более короткий синтаксис:
+Shorter syntax is used for colors in jsx markup:
 
 ```js
 const theme = {
@@ -74,9 +72,9 @@ export const MyComp = () => (
 );
 ```
 
-Для работы с медиа-выражениями в темах предусмотрены breakpoints:
+Themes have breakpoints for working with media expressions:
 
-К любому свойству можно добавить префикс в виде имени ключа breakpoint'а.
+Any property can be prefixed with a breakpoint key name
 
 ```js
 const theme = {
@@ -106,13 +104,12 @@ export const MyComp = () => (
 
 # Advanced usage
 
--   стили для компонента из темы
--   css-переменные для компонент
+-  styles for a theme component
+-  CSS variables for components
 
-### Стили для компонента из темы
+### Styles for a Theme Component
 
-Предусмотрен механизм стилизации компонент напрямую из темы.
-Ключем служит свойство name при создании компонента в atomize:
+There is a mechanism for styling components directly from the theme. The key is the name property when creating a component in atomize:
 
 ```js
 const Box = atomize.div({ name: "Box" });
@@ -129,11 +126,12 @@ export const MyComp = () => (
 );
 ```
 
-### Css-переменные для компонентов
+### CSS Variables for Components
 
-В некоторых случаях требуется задать переиспользуемые стили для одного или группы компонент
+In some cases, it is necessary to specify the reused styles for one or a group of components.
 
-Для использовая таких переменных необходимо указать префикс "--cmp"
+For using such variables, specify the prefix "--cmp"
+
 
 ```js
 const Box = atomize.div({});
