@@ -8,6 +8,12 @@
 
 Для того, чтобы использовать переменные из темы достаточно описать свойство в теме и обратиться к этому свойству используя префикс "--".
 
+# Demo
+
+[Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
+
+# Usage
+
 Переменные можно использовать как в JSX:
 
 ```js
@@ -86,5 +92,58 @@ export const MyComp = () => (
 );
 ```
 
-# Demo
-[Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
+# Advanced usage
+
+-   стили для компонента из темы
+-   css-переменные для компонент
+
+### Стили для компонента из темы
+
+Предусмотрен механизм стилизации компонент напрямую из темы.
+Ключем служит свойство name при создании компонента в atomize:
+
+```js
+const Box = atomize.div({ name: "Box" });
+const theme = {
+    Box: {
+        width: "100px",
+        height: "100px",
+    },
+};
+export const MyComp = () => (
+    <Theme>
+        <Box bgc="yellow" />
+    </Theme>
+);
+```
+
+### Css-переменные для компонентов
+
+В некоторых случаях требуется задать переиспользуемые стили для одного или группы компонент
+
+Для использовая таких переменных необходимо указать префикс "--cmp"
+
+```js
+const Box = atomize.div({});
+const theme = {
+    components: {
+        box: {
+            height: {
+                default: "100px",
+            },
+            width: {
+                default: "100px",
+            },
+        },
+    },
+};
+export const MyComp = () => (
+    <Theme>
+        <Box
+            height="--cmp-box-height-default"
+            witdh="--cmp-box-witdh-default"
+            bgc="yellow"
+        />
+    </Theme>
+);
+```
