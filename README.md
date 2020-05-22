@@ -1,5 +1,9 @@
-# @quarkly/theme
+<p>
+  <img src="logo.png" width="200px">
+</p>
+<h1> @quarkly/theme </h1>
 
+<br>
 Компонент для создания и использования тем совместно с @quarkly/atomize
 
 Темы в quarkly базируются на css-переменных.
@@ -10,7 +14,8 @@
 
 # Demo
 
-[Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
+- [Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
+- [Quarkly](https://quarkly.io)
 
 # Usage
 
