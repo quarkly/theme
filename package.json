@@ -1,0 +1,32 @@
+{
+  "name": "@quarkly/theme",
+  "version": "0.1.1",
+  "description": "Theme module from @quarkly/atomize",
+  "main": "build/cjs",
+  "module": "build/esm",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "clean": "rimraf build/*",
+    "build:cjs": "NODE_ENV=cjs babel src --out-dir build/cjs --ignore '**/*.test.js'",
+    "build:esm": "NODE_ENV=esm babel src --out-dir build/esm --ignore '**/*.test.js'"
+  },
+  "author": "Eddort",
+  "license": "MIT",
+  "dependencies": {
+    "@quarkly/atomize": "^0.2.22"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
