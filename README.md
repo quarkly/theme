@@ -1,6 +1,6 @@
 # @quarkly/theme
 
-Компонент для создания и использования совместно с @quarkly/atomize
+Компонент для создания и использования тем совместно с @quarkly/atomize
 
 Темы в quarkly базируются на css-переменных.
 
@@ -86,3 +86,5 @@ export const MyComp = () => (
 );
 ```
 
+# Demo
+[Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)

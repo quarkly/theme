@@ -1,7 +1,7 @@
 {
   "name": "@quarkly/theme",
-  "version": "0.1.1",
-  "description": "Theme module from @quarkly/atomize",
+  "version": "0.1.2",
+  "description": "Theme module for @quarkly/atomize",
   "main": "build/cjs",
   "module": "build/esm",
   "sideEffects": false,
@@ -13,8 +13,9 @@
   },
   "author": "Eddort",
   "license": "MIT",
-  "dependencies": {
-    "@quarkly/atomize": "^0.2.22"
+  "peerDependencies": {
+    "styled-components": "^5.0.1",
+    "react": "^16.13.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
