@@ -17,8 +17,15 @@
 - [Codesandbox](https://codesandbox.io/s/atomize-demo-pom06?file=/src/Example.js:182-335)
 - [Quarkly](https://quarkly.io)
 
-# Usage
+# Installation and Usage
+Темы используются вместе с [atomize](https://github.com/quarkly/atomize).
+```sh
+npm i @quarkly/atomize
+```
 
+```sh
+npm i styled-components
+```
 Переменные можно использовать как в JSX:
 
 ```js
